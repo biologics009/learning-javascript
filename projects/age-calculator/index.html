@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Age Calculator</h1>
+        <ul>
+            <li>Application of variables</li>
+            <li>Use of <code>Date()</code> function</li>
+            <li>DOM Manipulation</li>
+            <li>Event handeling</li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="calculator-area">
+            <div class="calculator-column">
+                <div class="calculator-body" onmouseenter="turnOnCalculator()" onmouseleave="turnOffCalculator()">
+                    <div class="calculator-display">
+                        <h3 id="calculator-display">
+
+                        </h3>
+                    </div>
+                    <div class="calculator-inputs">
+                        <i>From: </i>
+                        <input onchange="changeDob(event)" id="dob-input" title="Date of birth" placeholder="DD/MM/YYYY" type="date">
+                        <i>to </i>
+                        <input onchange="changeDateTill(event)" id="till-date-input" title="Till date"
+                            placeholder="Till today" type="date">
+                    </div>
+                    <div class="calculator-clear-button-area">
+                        <button onclick="clearDisplay()">
+                            Clear
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
